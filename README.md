@@ -18,7 +18,7 @@ oidc-provider is a bla bla bla who cares your a busy developer here's how to get
            |            &state={state}                  |             
            |            &nonce={nonce}                  |             
            |                                            |             
-           |       HTTP 302 /interaction/:grant         |             
+           |       HTTP 302 /interaction/:grant         | [if login_required]            
            |<-------------------------------------------|             
            |       +-----------------------------+      |             
            |       |                             |      |             
@@ -30,20 +30,22 @@ oidc-provider is a bla bla bla who cares your a busy developer here's how to get
            |       +-----------------------------+      |             
            |                                            |             
            |                                            |             
- +-------+ |       POST /interaction/:grant/login?      |             
+ +-------+ |       POST /interaction/:grant/login       |             
  |  Yes  | |------------------------------------------->|             
- +-------+ |            client_id={client_id}           |             
-           |            &redirect_uri={redirect_uri}    |             
-           |            &response_type=id_token token   |             
-           |            &scope=openid profile email     |             
-           |            &state={state}                  |             
-           |            &nonce={nonce}                  |             
+ +-------+ |            uuid: {grant}                   |             
+           |            username: {username}            |             
+           |            password: {password}            |             
+           |                                            | 
+           |                                            |            
            |                                            |             
            |            HTTP 302  {redirect_uri}?       |             
            |<-------------------------------------------|             
-           |                                            |             
-           |                                            |             
-           |                                            |                               
+           |             id_token={id_token}            |             
+           |             &session_state={session_state} |             
+           |             &access_token={access_token}   |
+           |             &token_type=Bearer             |           
+           |                                            |           
+           
 ```
 
 # Server
