@@ -2,6 +2,40 @@
 
 oidc-provider is a bla bla bla who cares your a busy developer here's how to get this thing actually working.
 
+# Overview
+```
+                                                                  
++-----------------+                          +-----------------+  
+|     Client      |                          |     Server      |  
++--------|--------+                          +-----------------+  
+         |                                            |           
+         |                                            |           
+         |--------------------------------------------|           
+         |                                            |           
+         |                                            |           
+         |                                            |           
+         |                                            |           
+         |                                            |           
+         |                                            |           
+         |                                            |           
+         |                                            |           
+         |                                            |          
+         |                                            |           
+         |                                            |           
+         |                                            |           
+         |                                            |           
+         |                                            |           
+         |                                            |           
+         |                                            |           
+         |                                            |           
+         |                                            |           
+         |                                            |           
+         |                                            |           
+         |                                            |           
+         |                                            |           
+         |                                            |           
+```
+
 # Server
 ## step 1 - install and run
 ```
