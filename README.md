@@ -20,12 +20,12 @@ We will use the `implicit` flow for a SPA (see Client setup below). Rule of thum
 
 👻open `example/settings.js` and edit the `module.exports.clients`
 
-|     |               |       |
-| --- |:-------------:| -----:|
-| 💻  | client_id     | `put_a_unique_client_id_here` 
-| 💻  | client_secret | `put_a_unique_client_secret_here`
-| 👉  | grant_types   | `['implicit']`
-| 💻  | redirect_uris | `['http://client_browser_app_goes_here/callback_handler_page.html']` 
+|     |                 |       |
+| --- |:---------------:| ----- |
+| 💻  | `client_id`     | `put_a_unique_client_id_here` 
+| 💻  | `client_secret` | `put_a_unique_client_secret_here`
+| 👉  | `grant_types`   | `['implicit']`
+| 💻  | `redirect_uris` | `['http://client_browser_app_goes_here/callback_handler_page.html']` 
 
 
 *e.g.* 
