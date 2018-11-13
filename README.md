@@ -4,44 +4,46 @@ oidc-provider is a bla bla bla who cares your a busy developer here's how to get
 
 # Overview
 ```
-                                                                  
-                                                                  
-+-----------------+                          +-----------------+  
-|     Client      |                          |     Server      |  
-+--------|--------+                          +--------|--------+  
-         |                                            |           
-         |           /authorize?                      |           
-         |------------------------------------------->|           
-         |            client_id={client_id}           |           
-         |            &redirect_uri={redirect_uri}    |           
-         |            &response_type=id_token token   |           
-         |            &scope=openid profile email     |           
-         |            &state={state}                  |           
-         |            &nonce={nonce}                  |           
-         |                                            |           
-         |                                            |           
-         |                                            |           
-         |                                            |           
-         |<-------------------------------------------|           
-         |                                            |           
-         |                                            |           
-         |                                            |           
-         |                                            |           
-         |------------------------------------------->|           
-         |                                            |           
-         |                                            |           
-         |                                            |           
-         |                                            |           
-         |<-------------------------------------------|           
-         |                                            |           
-         |                                            |           
-         |                                            |           
-         |------------------------------------------->|           
-         |                                            |           
-         |                                            |           
-         |                                            |           
-         |                                            |           
-         |<-------------------------------------------|                     
+                                                                      
+  +-----------------+                          +-----------------+    
+  |     Client      |                          |     Server      |    
+  +--------|--------+                          +--------|--------+    
+           |                                            |             
+           |            GET /authorize?                 |             
+           |------------------------------------------->|             
+           |            client_id={client_id}           |             
+           |            &redirect_uri={redirect_uri}    |             
+           |            &response_type=id_token token   |             
+           |            &scope=openid profile email     |             
+           |            &state={state}                  |             
+           |            &nonce={nonce}                  |             
+           |                                            |             
+           |       HTTP 302 /interaction/:grant         |             
+           |<-------------------------------------------|             
+           |       +-----------------------------+      |             
+           |       |                             |      |             
+           |       |      Authorize Page         |      |             
+           |       |                             |      |             
+           |       |  +-------+      +-------+   |      |             
+           |       |  |  Yes  |      |  No   |   |      |             
+           |       |  +-------+      +-------+   |      |             
+           |       +-----------------------------+      |             
+           |                                            |             
+           |                                            |             
+ +-------+ |       POST /interaction/:grant/login?      |             
+ |  Yes  | |------------------------------------------->|             
+ +-------+ |            client_id={client_id}           |             
+           |            &redirect_uri={redirect_uri}    |             
+           |            &response_type=id_token token   |             
+           |            &scope=openid profile email     |             
+           |            &state={state}                  |             
+           |            &nonce={nonce}                  |             
+           |                                            |             
+           |            HTTP 302  {redirect_uri}?       |             
+           |<-------------------------------------------|             
+           |                                            |             
+           |                                            |             
+           |                                            |                               
 ```
 
 # Server
