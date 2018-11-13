@@ -26,7 +26,7 @@ We will use the `implicit` flow for a SPA (see Client setup below). Rule of thum
 * 💻redirect_uris: `['http://client_browser_app_goes_here/callback_handler_page.html'],`
 
 *e.g.* 
-```
+``` javascript
 module.exports.clients = [{
     client_id: 'oidcCLIENT',
     client_secret: '91c0fabd17a9db3cfe53f28a10728e39b7724e234ecd78dba1fb05b909fb4ed98c476afc50a634d52808ad3cb2ea744bc8c3b45b7149ec459b5c416a6e8db242',
