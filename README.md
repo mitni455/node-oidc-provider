@@ -3,7 +3,7 @@
 oidc-provider is a bla bla bla who cares your a busy developer here's how to get this thing actually working.
 
 # Server
-### step 1 - install and run
+## step 1 - install and run
 ```
 git clone https://github.com/mitni455/node-oidc-provider node-oidc-server 
 cd node-oidc-server/example
@@ -13,7 +13,7 @@ npm start
 
 👉The server is known as the `issuer` in OIDC. 
 
-### step 2 - review and/or configure settings
+## step 2 - review and/or configure Client settings
 We need to setup a `client` app to interact with this server. 
 
 We will use the `implicit` flow for a SPA (see Client setup below). Rule of thumb use `implicit` for frontend apps, and `authorization code` for a client server (e.g. if you serve the front end with express, koa, ect)
@@ -36,7 +36,9 @@ module.exports.clients = [{
 ```
 
 
-### step 3 - configure
+## step 3 - review/configure User settings
+We need to setup a `user` to login 
+
 
 
 # Client
