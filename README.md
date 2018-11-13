@@ -18,12 +18,12 @@ We need to setup a `client` app to interact with this server.
 
 We will use the `implicit` flow for a SPA (see Client setup below). Rule of thumb use `implicit` for frontend apps, and `authorization code` for a client server (e.g. if you serve the front end with express, koa, ect)
 
-open settings.js and edit the `module.exports.clients`
+👻open settings.js and edit the `module.exports.clients`
 
-* client_id: `put_a_unique_client_id_here`,
-* client_secret: `put_a_unique_client_secret_here`,
-* grant_types: `['implicit']`,
-* redirect_uris: `['http://client_browser_app_goes_here/callback_handler_page.html'],`
+* 💻client_id: `put_a_unique_client_id_here`,
+* 💻client_secret: `put_a_unique_client_secret_here`,
+* 👉grant_types: `['implicit']`,
+* 💻redirect_uris: `['http://client_browser_app_goes_here/callback_handler_page.html'],`
 
 *e.g.* 
 ```
